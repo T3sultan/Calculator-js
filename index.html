@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/9f38c6f920.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: hsl(224, 28%, 35%);
+
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 400px;
+            height: 105px;
+            margin: auto;
+            background: black;
+            padding: 15px;
+
+            align-items: center;
+            margin-top: -15px;
+            border-radius: 10px;
+
+
+
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+            background: black;
+            border-color: black;
+            color: white;
+            justify-content: center;
+            text-align: right;
+
+        }
+
+        .button {
+            width: 90px;
+            height: auto;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-color: white;
+
+        }
+
+        #RESET {
+            width: 50%;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-color: #A2B2E1;
+            background-color: #A2B2E1;
+        }
+
+        .button1 {
+            width: 48%;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: hsl(6, 63%, 50%);
+            border-color: hsl(6, 63%, 50%);
+            color: white;
+        }
+
+
+        .container {
+            width: 400px;
+            height: auto;
+            margin: 400px;
+        }
+
+        .wrap1 {
+            margin-top: 15px;
+            margin: 13px;
+
+
+        }
+
+        .container1 {
+            background-color: hsl(233, 31%, 20%);
+            border-radius: 10px;
+            height: 290px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <h1 style="color: white;">calc</h1>
+            </div>
+            <div>
+                <h1><span style="font-size: 14px;color: white;">THEME</span> <i style="color:black" class="fas fa-toggle-on"></i></h1>
+            </div>
+        </div>
+
+        <form name="cal">
+
+            <div class="wrap">
+
+                <input class="input" type="text" name="display">
+                <br><br>
+
+            </div>
+            <div class="container1">
+                <div class="wrap1">
+                    <input class="button" type="button" value="7" onclick="cal.display.value+='7'">
+                    <input class="button" type="button" value="8" onclick="cal.display.value+='8'">
+                    <input class="button" type="button" value="9" onclick="cal.display.value+='9'">
+                    <input style="background-color: #A2B2E1;border-color: #A2B2E1;" class="button" type="button"
+                        value="DEL" onclick="cal.display.value=''" id="DEL">
+                    <br>
+                    <input class="button" type="button" value="4" onclick="cal.display.value+='4'">
+                    <input class="button" type="button" value="5" onclick="cal.display.value+='5'">
+                    <input class="button" type="button" value="6" onclick="cal.display.value+='6'">
+                    <input class="button" type="button" value="+" onclick="cal.display.value+='+'">
+                    <br>
+                    <input class="button" type="button" value="1" onclick="cal.display.value+='1'">
+                    <input class="button" type="button" value="2" onclick="cal.display.value+='2'">
+                    <input class="button" type="button" value="3" onclick="cal.display.value+='3'">
+                    <input class="button" type="button" value="-" onclick="cal.display.value+='-'">
+                    <br>
+                    <input class="button" type="button" value="." onclick="cal.display.value+='.'">
+                    <input class="button" type="button" value="0" onclick="cal.display.value+='0'">
+                    <input class="button" type="button" value="/" onclick="cal.display.value+='/'">
+                    <input class="button" type="button" value="X" onclick="cal.display.value+='X'">
+                    <br>
+                    <input class="reset" type="button" value="RESET" onclick="cal.display.value=''" id="RESET">
+                    <input class="button1" type="button" value="=" onclick="cal.display.value=eval(cal.display.value)">
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </form>
+    </section>
+    <script src="./styles.css"></script>
+</body>
+
+</html>
